@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body[data-theme="ligth"]{
+
+    --color1: rgb(241,197,197);
+    --color2: rgb(1000,1000,1000);
+    --color3: rgb(39,40,42);
+    --color4: rgb(110,80,80);
+}
+
+body[data-theme="dark"]{
+
+    /* esses traços antes de color é justamente para fixar como variavel
+    pois pode ter algum comando do css, ai tu bota esses traços para impedir */
+
+    --color1: rgb(37, 5, 5);
+    --color2: rgb(1000,1000,1000);
+    --color3: rgb(28, 183, 116);
+    --color4: rgb(201, 22, 22);
+}
+
+section{
+
+    background-color: var(--color1);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.conteiner{
+
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--color2);
+    border-radius: 10px;
+    padding: 20px;
+    height: 500px;
+}
+
+h1{
+
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+p{
+
+    margin-top: 10px;
+    font-size: medium;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-transform: uppercase;
+
+}
+
+button{
+
+    background-color: var(--color4);
+    padding: 10px 30px;
+    border: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--color3);
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.theme-switcher{
+
+    position: absolute;
+    right: 30px;
+    top: 10px;
+
+}
+
+input {
+
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+
+}
+
+label{
+
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    width: 50px;
+    border-radius: 10px;
+    transition: 0.5 ease background-color;
+
+}
+
+/* aqui vai ser o que o label vai se tranformar depois de
+    ser interagido */
+label::after{
+
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: rgb(139, 40, 40);
+    transition: 0.5 ease;
+    
+}
+
+input:checked + label::after{
+
+    left: calc(100% - 2.5px);
+    background-color: aliceblue;
+
+}
+
+input:checked + label
+
