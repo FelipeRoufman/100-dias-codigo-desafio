@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    height: 100hv;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(74, 73, 87);
+
+}
+
+.img-slider{
+
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 100px;
+    background-color: rgb(74, 73, 87);
+
+}
+
+.img-slider .slide{
+
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+
+}
+
+.img-slider .slide.active{
+
+    z-index: 1;
+    clip-path: circle(150% at 0 50%);
+    transition: 1s;
+    transition-property: clip-path;
+
+}
+
