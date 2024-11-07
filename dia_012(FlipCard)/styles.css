@@ -26,6 +26,7 @@ body {
     position: relative;
     transition: transform 1500ms;
     transform-style: preserve-3d;
+    position: relative;
 
 }
 
@@ -36,6 +37,8 @@ body {
     border-radius: 2rem;
     box-shadow: 0 0 5px 2px gray;
     backface-visibility: hidden;
+    position: absolute;
+    margin-top: 200px;
 
 }
 
