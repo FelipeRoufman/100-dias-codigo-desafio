@@ -1,0 +1,1 @@
+tem como fazer uma api para se relacionar com o paypal, mas eu nao vou  fazer pois involve informaçao de banco chata |u|
